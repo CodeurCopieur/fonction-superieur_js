@@ -60,3 +60,36 @@ function occurences(str, bar) {
 
 console.log(occurences(string, el => el === "i"));
 console.log(occurences(string, el => el === "e"));
+
+
+function createCount() {
+  const counter = {
+    value: 0
+  }
+
+  function incre() {
+    counter.value++
+  }
+
+  function decre() {
+    counter.value--
+  }
+
+  function getCount() {
+    console.log("Current count:", counter.value);
+  }
+
+  return {
+    incre,
+    decre,
+    getCount
+  }
+}
+
+const counter1 = createCount()
+counter1.incre()
+counter1.decre()
+counter1.incre()
+counter1.incre()
+counter1.getCount()
+console.dir(counter1.incre)
